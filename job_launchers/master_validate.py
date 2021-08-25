@@ -22,7 +22,7 @@ if args.train_corpus is None:
 train_dir = f"{args.experiment_dir}/train/{args.train_corpus}.train"
 assert Path(train_dir).is_dir()
 
-log_file = f"validate_{args.corpus}_{args.experiment_dir.name}_{METRIC}.log"
+log_file = f"validation_logs/validate_{args.corpus}_{args.experiment_dir.name}_{METRIC}.log"
 command_args = [
     "sbatch",
     "-o", log_file,
