@@ -31,7 +31,7 @@ validate_dir = f"{args.experiment_dir}/train/{args.train_corpus}.train/validate_
 print(validate_dir)
 assert Path(validate_dir).is_dir()
 
-log_file = f"apply_{args.corpus}_{args.experiment_dir.name}_{METRIC}.log"
+log_file = f"apply_logs/apply_{args.corpus}_{args.experiment_dir.name}_{METRIC}.log"
 command_args = [
     "sbatch",
     "-o", log_file,

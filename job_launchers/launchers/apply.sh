@@ -7,7 +7,8 @@
 #SBATCH --hint=nomultithread          # hyperthreading desactive
 
 
-EXPERIMENT_DIR=$1
-PROTOCOL_NAME=$2
+VALIDATE_DIR=$2
+PROTOCOL_NAME=$1
+SUBSET=$3
 
-pyannote-audio mlt apply --gpu  --subset=$SUBSET $VALIDATE_DIR $PROTOCOL_NAME
+pyannote-audio mlt apply --gpu $VALIDATE_DIR $PROTOCOL_NAME
